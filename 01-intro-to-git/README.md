@@ -6,8 +6,8 @@
 
 - [x] Cloning a repo
 - [x] Staging our changes
-- [ ] Commit our staged files
-- [ ] Push changes remotely
+- [x] Commit our staged files
+- [x] Push changes remotely
 
 ### Navigating history
 
