@@ -11,8 +11,8 @@
 
 ### Navigating history
 
-- [ ] Checkout a previous Commit
-- [ ] Go back to the branch HEAD
+- [x] Checkout a previous Commit
+- [x] Go back to the branch HEAD
 
 ### Branching & Merging
 
