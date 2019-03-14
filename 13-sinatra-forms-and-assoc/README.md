@@ -5,13 +5,13 @@
 
 ### See bottom of the file for SQL info.
 
-[Sinatra](http://sinatrarb.com/about.html){:target="_blank"}
+[Sinatra](http://sinatrarb.com/about.html)
 
-[CRUD vs REST](https://image.slidesharecdn.com/restvssoap-130104080511-phpapp01/95/rest-vs-soap-40-638.jpg?cb=1357286773){:target="_blank"}
+[CRUD vs REST](https://image.slidesharecdn.com/restvssoap-130104080511-phpapp01/95/rest-vs-soap-40-638.jpg?cb=1357286773)
 
-[RESTful routes](https://i.imgur.com/omvB7JJ.png){:target="_blank"}
+[RESTful routes](https://i.imgur.com/omvB7JJ.png)
 
-[html forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form){:target="_blank"}
+[html forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 
 ## What will we be doing:
 
