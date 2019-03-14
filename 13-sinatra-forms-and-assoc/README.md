@@ -1,17 +1,17 @@
 
 ## "Frank Sinatra (chairman of the board) for having so much class he deserves a web-framework named after him."
 
-<a href="https://flatiron-sql-designer.herokuapp.com/" target="_blank">Flatiron SQL Designer</a>
+[Flatiron SQL Designer](https://flatiron-sql-designer.herokuapp.com/)
 
 ### See bottom of the file for SQL info.
 
-<a href=""></a>[Sinatra](http://sinatrarb.com/about.html){:target="_blank"}
+[Sinatra](http://sinatrarb.com/about.html){:target="_blank"}
 
-<a href=""></a>[CRUD vs REST](https://image.slidesharecdn.com/restvssoap-130104080511-phpapp01/95/rest-vs-soap-40-638.jpg?cb=1357286773){:target="_blank"}
+[CRUD vs REST](https://image.slidesharecdn.com/restvssoap-130104080511-phpapp01/95/rest-vs-soap-40-638.jpg?cb=1357286773){:target="_blank"}
 
-<a href=""></a>[RESTful routes](https://i.imgur.com/omvB7JJ.png){:target="_blank"}
+[RESTful routes](https://i.imgur.com/omvB7JJ.png){:target="_blank"}
 
-<a href=""></a>[html forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form){:target="_blank"}
+[html forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form){:target="_blank"}
 
 ## What will we be doing:
 
