@@ -1,0 +1,10 @@
+<h1>All users</h1>
+
+<ul>
+    <% @users.each do |u| %>
+      <li>
+        <a href="/users/<%= u.id %>"><%= u.name %> - <%= u.nickname %>
+        </a>
+      </li>
+    <% end %>
+</ul>

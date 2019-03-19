@@ -1,0 +1,23 @@
+<h1>Edit user</h1>
+
+<a href="/users/<%= @user.id %>">Go back</a>
+
+<form action="/whatever/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="patch" />
+  <input type="hidden" name="rest[:user_id]" value="<%= @user.id %>" />
+  <div>
+    <label for="">name:</label>
+    <input type="text" name="user[name]" value="<%= @user.name %>" />
+  </div>
+  <div>
+    <label for="">nickname:</label>
+    <input type="text" name="user[nickname]" value="<%= @user.nickname %>" />
+  </div>
+  <input type="submit" value="Edit user" />
+</form>
+
+
+<form action="/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input id="mysubmit" type="submit" value="Delete user" />
+</form>

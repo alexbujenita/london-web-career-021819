@@ -1,0 +1,43 @@
+<h1>Welcome to <%= @group.title %> group</h1>
+
+<h4>Participants:</h4>
+
+<hr>
+
+<ul>
+  <% @group.users.each do |user| %>
+    <li><%= user.nickname %></li>
+  <% end %>
+</ul>
+
+<br><br><hr><br>
+
+<h4>Add message</h4>
+
+<form action="/users/<%= @user.id %>/groups/<%= @group.id %>/messages" method="post">
+  <div>
+    <label for="">Content:</label>
+    <br>
+    <textarea name="message[content]"></textarea>
+    <input type="hidden" name="message[user_id]" value="<%= @user.id %>">
+    <input type="hidden" name="message[group_id]" value="<%= @group.id %>">
+  </div>
+  <div>
+    <input type="submit" value="Send Message">
+  </div>
+</form>
+
+<br><br><hr><br>
+
+
+<h4>Messages</h4>
+
+<hr>
+
+<ul>
+  <% @group.messages.reverse.each do |m| %>
+    <div style="display: flex; justify-content: <%= @user.id == m.user_id ? 'flex-end' : 'flex-start'; %>">
+      <li style="background-color: <%= @user.id == m.user_id ? '#DFF8D0' : '#F3F6F1'; %>; padding: 10px; margin-bottom: 5px;width: 200px;"><%= m.content %></li>
+    </div>
+  <% end %>
+</ul>

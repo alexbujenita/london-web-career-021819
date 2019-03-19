@@ -1,0 +1,39 @@
+<h1>Hello <%= @user.name %></h1>
+<h4><%= @user.nickname %></h4>
+
+<a href="/users">Go Back</a>
+
+<h4>Groups</h4>
+
+<h1>Create a new group</h1>
+
+<a href="/users/<%= @user.id %>">Go Back</a>
+
+<form action="/groups" method="post">
+  <div>
+    <label for="">Group title:</label>
+    <input type="text" name="group[title]">
+    <input type="text" name="user[id]" value="<%= @user.id %>" hidden>
+  </div>
+  <div>
+    <label for="">Participants:</label>
+    <ul>
+      <% @users.each do |u| %>
+        <li><input type="checkbox" name="group[user_ids][]" value="<%= u.id %>"
+          <% if @user.id == u.id %>
+            checked hidden>
+          <% else %>
+            ><%= u.name %>
+          <% end %>
+        </input></li>
+      <% end %>
+    </ul>
+   </div>
+  <input type="submit" value="Create Group" />
+</form>
+
+<ul>
+  <% @user.groups.each do |group| %>
+  <li><a href="/users/<%= @user.id %>/groups/<%= group.id %>"><%= group.title  %></a></li>
+  <% end %> 
+</ul>
