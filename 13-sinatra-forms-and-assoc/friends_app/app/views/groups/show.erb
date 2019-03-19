@@ -2,7 +2,7 @@
 
 <h4>Participants:</h4>
 
-<br><br><hr><br>
+<hr>
 
 <ul>
   <% @group.users.each do |user| %>
@@ -12,12 +12,7 @@
 
 <br><br><hr><br>
 
-<h4>Messages</h4>
-<br><br><hr><br>
-
 <h4>Add message</h4>
-
-
 
 <form action="/users/<%= @user.id %>/groups/<%= @group.id %>/messages" method="post">
   <div>
@@ -32,10 +27,13 @@
   </div>
 </form>
 
+<br><br><hr><br>
 
 
-<br><br><hr><br>
-<br><br><hr><br>
+<h4>Messages</h4>
+
+<hr>
+
 <ul>
   <% @group.messages.reverse.each do |m| %>
     <div style="display: flex; justify-content: <%= @user.id == m.user_id ? 'flex-end' : 'flex-start'; %>">

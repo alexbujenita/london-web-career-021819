@@ -7,8 +7,7 @@ class GroupsController < ApplicationController
   end
 
   post '/groups' do 
-    # 
-    binding.pry
+    # binding.pry
     Group.create(params[:group])
   end
 
