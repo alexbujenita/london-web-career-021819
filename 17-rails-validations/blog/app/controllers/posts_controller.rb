@@ -15,7 +15,13 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to post_path @post
+
+    if @post.valid?
+      redirect_to post_path @post
+    else
+      flash[:errors] = @post.errors.full_messages
+      redirect_to new_post_path
+    end
   end
 
 

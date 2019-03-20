@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <% errors = flash[:errors] %>
+    <% if !errors %>
+    <% else %>
+      <% errors.each do |e| %>
+        <p style="color: red;"> <%= e %>  </p>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
