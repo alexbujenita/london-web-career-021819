@@ -1,0 +1,8 @@
+<ul>
+    <% @destination.posts.last(5).each do |post|%>
+        <li><%= post.title %></li>
+    <% end %>
+</ul>
+
+<%= link_to 'Featured Post', post_path(@destination.posts.max_by {|post| post.likes })%>
+<p><%= @destination.bloggers.reduce(0) { |sum, blogger| sum + blogger.age }/@destination.bloggers.length%></p>
