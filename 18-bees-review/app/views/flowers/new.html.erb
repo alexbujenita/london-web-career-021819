@@ -1,0 +1,10 @@
+<%= form_for(@flower) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :pollen_capacity %>
+    <%= f.number_field :pollen_capacity %>
+    <%= f.label :bees %>
+    <%= f.collection_check_boxes :bee_ids, Bee.all, :id, :name %>
+    <%= f.submit %>
+<% end %>
+  
