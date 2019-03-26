@@ -1,0 +1,39 @@
+<h1><%= @train.name %></h1>
+
+<%= link_to 'edit me', edit_train_path(@train) %>
+
+<p>
+  This train costs £<%= @train.price %>
+</p>
+
+
+<% if @train.conductor %>
+  <p>
+    The conductor of this train is <b><%= @train.conductor.name %></b>
+  </p>
+<% else  %>
+  <p>
+    This train has no conductor yet.
+  </p>
+<% end  %>
+
+<% if @train.passengers.length == 0 %>
+  <p>
+    That train has no passengers on it.
+  </p>
+<% else %>
+  <h3>List of passengers:</h3>
+  <ul>
+    <% @train.passengers.each do |passenger| %>
+      <li>
+        <%= passenger.name %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p>
+  <%= @train.choo_choo  %>
+</p>
+
+<%= link_to "All Trains", trains_path %>

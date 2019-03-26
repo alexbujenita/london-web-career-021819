@@ -1,0 +1,7 @@
+<h2> Edit me </h2>
+
+<%= render 'form' %>
+
+<%= form_tag "/trains/#{@train.id}", method: 'delete' do %>
+  <%= submit_tag 'get that train off the tracks' %>
+<% end %>
