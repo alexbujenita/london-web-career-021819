@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     authorized_for(params[:id])
     @user = User.find(params[:id])
     if @user.admin
-      @admin_panel = User.all
+      @all_users_if_admin = User.all
     end
   end
 

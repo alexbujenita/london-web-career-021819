@@ -3,11 +3,11 @@
 
 <h1> TICKET SECRET DATA FOR SECRET TRAVEL 🚉</h1>
 
-<% if @admin_panel %>
+<% if @all_users_if_admin %>
   <h4> Seems like you're an admin!</h4>
   <h3>Admin panel:</h3>
   <ul>
-    <% @admin_panel.each do |u| %>
+    <% @all_users_if_admin.each do |u| %>
       <li>
         <%= link_to u.name, u %>
       </li>
