@@ -1,0 +1,11 @@
+<h1><%= @blogger.name %></h1>
+<p>Likes: <%= @blogger.posts.reduce(0) {|sum, post| sum + post.likes }%></p>
+<%#  BONUS!!!!! Here's a list of this bloggers top 5 most written about destinations %>
+<p>Top 5 most written about destinations:</p>
+<ul>
+<% @blogger.destinations.sort_by {|destination| destination.posts.count }.last(5).each do |destination| %>
+    <li><%= destination.name %></li>
+<% end %>
+</ul>
+
+<%= link_to 'Feature Post', post_path(@blogger.posts.max_by {|post| post.likes })%>

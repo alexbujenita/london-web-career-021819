@@ -1,0 +1,8 @@
+<h1>All Hives</h1>
+
+<ul><% @hives.each do |hive| %>
+    <li><%= link_to hive.name, hive %> | <%= hive.honey_type %></li>
+    <% end  %>
+</ul>
+
+ <%= link_to "Create new Hive", new_hive_path %>

@@ -1,0 +1,11 @@
+<h1>Edit Hive:</h1>
+
+<%= render "form" %>
+<br>
+<%= link_to "Go back!", @hive %>
+
+<%= form_tag hive_path(@hive), method "delete" do %>
+    <%= submit_tag "Delete Hive" %>
+    <% end %>
+
+<%= render "footer" %>

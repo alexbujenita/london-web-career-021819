@@ -1,0 +1,11 @@
+<h1><%= @hive.name %></h1>
+
+<p>This is a lovely hive. It specialises in <%= @hive.honey_type %> honey.</p>
+
+<p>The bees that belong to this hive are:</p>
+
+<ul><% @bees.each do |bee| %>
+    <li><%= link_to bee.name, bee %></li>
+    <% end %>
+    </ul>
+<%= render "footer" %>

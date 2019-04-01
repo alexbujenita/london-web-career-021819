@@ -1,0 +1,9 @@
+<h1>Edit <%= @train.name %></h1>
+
+<%= render 'form' %>
+
+<%= form_tag @train, method: 'delete' do %>
+  <%= submit_tag 'get that train off the tracks' %>
+<% end %>
+
+<%#= link_to "Delete Train", train_path(@train), method: 'delete' %>

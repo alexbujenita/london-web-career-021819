@@ -1,0 +1,13 @@
+<h1>
+  <%= @post.title %>
+</h1>
+
+<h3>
+  <%= @post.user.name %>
+</h3>
+
+<p>
+  <%= @post.content %>
+</p>
+
+<%= link_to 'see all posts', posts_path %>
