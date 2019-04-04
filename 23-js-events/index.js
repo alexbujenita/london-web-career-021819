@@ -18,6 +18,7 @@ formEl.addEventListener('submit', (event) => {
   event.preventDefault()
   const text = formEl.text.value
   addTodo(text)
+  createTodo(text)
   formEl.reset()
 })
 
@@ -29,19 +30,11 @@ document.addEventListener('click', (event) => {
   }
 })
 
-
-const parentEl = document.querySelector('#parent')
-const childEl = document.querySelector('#child')
-const grandchildEl = document.querySelector('#grandchild')
-
-parentEl.addEventListener('click', event => {
-  event.stopPropagation()
-  console.log("I'm the parent")
-})
-childEl.addEventListener('click', event => {
-  console.log("I'm the child")
-})
-grandchildEl.addEventListener('click', event => {
-  console.log("I'm the grandchild")
-})
-
+// server stuff
+function createTodo (text) {
+  fetch('http://localhost:3000/todos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text })
+  })
+}
