@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trainshop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <h1 class="header">
+      <%= link_to 'Trainshop 🛤', trains_path %>
+      <span>
+          <% if !logged_in? %>
+            <button>
+              <%= link_to 'signup', signup_path %>
+            </button>
+            <button>
+              <%= link_to 'login', login_path %>
+            </button>
+          <% else %>
+            <span>hello, <%= current_user.name %></span>
+            <button>
+              <%= link_to "log out", logout_path, method: "post" %>
+            </button>
+            <button>
+              <%= link_to "my account", user_path(current_user.id) %>
+            </button>
+          <% end %>
+        </span>
+    </h1>
+
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |e|  %>
+        <p style="color: red"> <%= e %> </p>
+      <% end %>
+    <% end  %>
+
+    <%= yield %>
+  </body>
+</html>

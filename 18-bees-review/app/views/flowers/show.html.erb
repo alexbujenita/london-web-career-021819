@@ -1,0 +1,7 @@
+<%= @flower.name %> | <%= @flower.pollen_capacity %> 
+<p>Bees</p>
+ 
+ <% @flower.bees.each do |bee| %>
+   <%= bee.name %>
+ <% end %>
+ 

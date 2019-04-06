@@ -1,0 +1,16 @@
+<%= form_for @post do |f|%>
+    <%= f.label :title %>
+    <%# Notice the required: true flag that meets the deliverable that
+    posts *should* have a title and content. This can also be achieved with
+    a Active Record validation %>
+    <%= f.text_field :title, required: true %>
+    <%= f.label :content %>
+    <%# Notice that we can also use a text_area to denote
+    the fact that this is expected to be long form text. %>
+    <%= f.text_area :content, required: true %>
+    <%= f.label :blogger_id %>
+    <%= f.collection_select :blogger_id, Blogger.all, :id, :name %>
+    <%= f.label :destination_id %>
+    <%= f.collection_select :destination_id, Destination.all, :id, :name %>
+    <%= f.submit %>
+<% end %>

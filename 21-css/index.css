@@ -1,0 +1,87 @@
+.list {
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list_card_wrapper {
+    width: 20%;
+    height: 350px;
+    /*   background-color: green; */
+    margin: 20px 0;
+    transition: .3s;
+}
+
+.list_card {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    background-color: pink;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.list_card:hover {
+    background-color: blue;
+}
+
+.list_card:hover .circle {
+    animation: 0.4s bounceIn forwards;
+}
+
+@keyframes bounceIn {
+    0% {transform: translateY(400px);}
+    80% {transform: translateY(-20px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes bounceOut {
+    0% {transform: translateY(0);}
+    80% {transform: translateY(-20px);}
+    100% {transform: translateY(400px);}
+}
+
+.circle {
+    transition: .3s;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(400px);
+    animation: 0.4s bounceOut forwards;
+}
+.circle img {
+    height: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* .list_card:nth-child(3n+2) {
+    background-color: pink;
+  margin: 20px 5%;
+} */
+
+.list:after {
+    content: '';
+    flex: 1 1 auto;
+}
+
+.triangle {
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    height: 100px;
+    width: 150%;
+    background-color: aliceblue;
+    transform: rotate(-20deg);
+}

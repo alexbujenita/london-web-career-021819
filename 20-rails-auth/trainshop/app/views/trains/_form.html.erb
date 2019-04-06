@@ -1,0 +1,24 @@
+<%= form_for @train do |f| %>
+
+  <%= f.label :name, 'Select a train name' %>
+  <%= f.text_field :name %>
+
+  <br>
+
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+
+  <br>
+
+  <%= f.label :conductor_id %>
+  <%= f.collection_select :conductor_id, @conductors, :id, :name %>
+
+  <br>
+
+  <%= f.label :passenger_ids, 'Select passengers:' %>
+  <%= f.collection_check_boxes :passenger_ids, Passenger.all, :id, :name %>
+
+  <br>
+
+  <%= f.submit %>
+<% end %>
