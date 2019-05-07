@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     if logged_in
       render json: User.find(current_user[:id]).posts
     else 
-      render json: {error: "You dun goofed!"}
+      render json: {error: "Posts not available."}
     end
   end
 end

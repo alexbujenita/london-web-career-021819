@@ -133,7 +133,7 @@ Look at how we're using the secret in both `issue_token` and `decode_token` meth
 `export RAILS_SECRET=adsofijasdofijsadoifdasjio`
 `echo $RAILS_SECRET`
 
-`ENV[RAILS_SECRET]`
+`ENV["RAILS_SECRET"]`
 
 ```rb
 # application_controller.rb
@@ -216,7 +216,7 @@ def show
   if logged_in
     render json: current_user
   else
-    render json: {error: "You dun goofed!"}
+    render json: {error: "Current user not found"}
   end
 end
 ```
@@ -295,8 +295,6 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 ```
-
-## Step 2: Talking to the backend from react
 
 ## NOTE
 

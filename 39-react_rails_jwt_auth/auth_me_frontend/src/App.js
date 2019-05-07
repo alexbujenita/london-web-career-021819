@@ -39,6 +39,8 @@ class App extends React.Component {
   onLoginClicked = e => {
     e.preventDefault();
     api.login(this.state.username, this.state.password).then(data => {
+      // if data has data.error, then to not proceed
+      // if (data.error === undefined)
       localStorage.setItem("token", data.jwt);
       this.setState({ logged_in: true, username: data.username });
     });
